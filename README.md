@@ -17,7 +17,7 @@ Features:
 Project Structure
 
 - Models/Calculator.cs  
-  Defines the `Calculator` class with operands, operator, and result.
+  Defines the Calculator class with operands, operator, and result.
 
 - Controllers/HomeController.cs  
   Handles input from the form, processes the calculation, and returns the result to the view.
@@ -38,6 +38,6 @@ Project Structure
 1. Clone the repository.
 2. Open the solution in Visual Studio (2017 or later).
 3. Make sure you have .NET Framework 4.7 installed.
-4. Build the solution (`Ctrl+Shift+B`).
-5. Run the project (`Ctrl+F5`) – it will start with IIS Express.
+4. Build the solution (Ctrl+Shift+B).
+5. Run the project (Ctrl+F5) – it will start with IIS Express.
 6. Navigate to the calculator page and start calculating.
