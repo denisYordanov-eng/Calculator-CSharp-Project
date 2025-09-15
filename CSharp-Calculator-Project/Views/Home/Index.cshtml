@@ -1,0 +1,27 @@
+﻿@model CSharp_Calculator_Project.Models.Calculator
+
+@{
+    ViewBag.Title = "Calculator";
+}
+<div class="well">
+    @using (Html.BeginForm("Calculate", "Home", FormMethod.Post, new { @class = "d-flex align-items-center gap-2" }))
+    {
+        @Html.TextBoxFor(model => model.LeftOperand, new { @class = "form-control w-auto" })
+
+        @Html.DropDownListFor(model => model.Operator,
+            new[] {
+                new SelectListItem { Text = "+", Value = "+" },
+                new SelectListItem { Text = "-", Value = "-" },
+                new SelectListItem { Text = "*", Value = "*" },
+                new SelectListItem { Text = "/", Value = "/" },
+            }, new { @class = "form-control w-auto" })
+
+        @Html.TextBoxFor(model => model.RightOperand, new { @class = "form-control w-auto" })
+
+        <span class="mx-2">=</span>
+
+        @Html.TextBoxFor(model => model.Result, null, new { @class = "form-control w-auto" })
+
+        <button type="submit" class="btn btn-primary ms-2">Calculate</button>
+    }
+</div>
